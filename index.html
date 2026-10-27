@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A one-page field guide to South Island, New Zealand: remarkable places, a seven-day route and practical travel tips."
+    />
+    <title>South Island Holiday Run</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="hero" id="top">
+      <img
+        class="hero-image"
+        id="hero-image"
+        src="hero-south-island.webp"
+        alt=""
+        fetchpriority="high"
+      />
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="South Island Holiday Run home">
+          <span class="brand-mark" aria-hidden="true">SI</span>
+          <span>Holiday Run</span>
+        </a>
+        <div class="nav-links">
+          <a href="#places">Places</a>
+          <a href="#route">7-day route</a>
+          <a href="#tips">Travel tips</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="overline">Te Waipounamu · Aotearoa New Zealand</p>
+        <h1>South Island<br />Holiday Run</h1>
+        <div class="hero-intro">
+          <p>
+            <strong>Take the long way south.</strong> A guide to alpine passes,
+            fiords, wildlife coasts and unforgettable journeys between them.
+          </p>
+          <a class="button button--primary" href="#places">
+            Explore the island
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="hero-route">
+        Christchurch <span>—</span> Aoraki <span>—</span> Wānaka
+        <span>—</span> Queenstown <span>—</span> Fiordland
+      </p>
+
+      <svg
+        class="torn-edge"
+        viewBox="0 0 1440 42"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0 28L38 24L73 30L111 19L153 25L198 17L236 26L274 21L318 30L359 18L401 24L446 14L487 25L532 20L576 29L617 17L659 23L705 15L746 26L791 20L833 29L878 17L920 25L963 19L1008 28L1050 16L1093 24L1138 18L1181 27L1227 15L1268 23L1314 18L1357 26L1401 20L1440 25V42H0Z"
+        />
+      </svg>
+    </header>
+
+    <main id="main-content">
+      <section class="intro section" aria-labelledby="intro-title">
+        <div class="container intro-grid">
+          <h2 id="intro-title">
+            One island.<br /><em>Every kind of wild.</em>
+          </h2>
+          <div class="intro-copy">
+            <p>
+              From the golden bays of Nelson Tasman to the deep fiords of the
+              southwest, South Island rewards travellers who leave room to
+              wander.
+            </p>
+            <p>
+              Use this guide to choose a few memorable stops, sketch a route and
+              prepare for conditions that can change quickly.
+            </p>
+            <span class="handwritten-note">Less rushing. More looking.</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="places section"
+        id="places"
+        aria-labelledby="places-title"
+      >
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div>
+              <p class="section-label">Field notes / Places</p>
+              <h2 id="places-title">Choose your kind of south.</h2>
+            </div>
+            <p>
+              Filter six favourite stops, then add the ones you like to your
+              road-trip shortlist.
+            </p>
+          </div>
+
+          <div class="filter-bar">
+            <span class="filter-label" id="filter-label">Show me</span>
+            <div
+              class="filter-buttons"
+              role="group"
+              aria-labelledby="filter-label"
+            >
+              <button
+                class="filter-button is-active"
+                type="button"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                All places
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-filter="alpine"
+                aria-pressed="false"
+              >
+                Alpine
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-filter="coast"
+                aria-pressed="false"
+              >
+                Coast &amp; fiords
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-filter="adventure"
+                aria-pressed="false"
+              >
+                Adventure
+              </button>
+            </div>
+          </div>
+
+          <p class="filter-summary" id="filter-summary" aria-live="polite"></p>
+          <div class="destination-grid" id="destination-grid"></div>
+          <noscript
+            ><p class="noscript-message">
+              browse and shortlist the destinations.
+            </p></noscript
+          >
+        </div>
+      </section>
+
+      <section
+        class="shortlist-section"
+        id="shortlist"
+        aria-labelledby="shortlist-title"
+      >
+        <div class="container shortlist-grid">
+          <div>
+            <p class="section-label section-label--light">Your road trip</p>
+            <h2 id="shortlist-title">Keep the places that pull you in.</h2>
+            <p class="shortlist-help">Use “Add to route” above.</p>
+          </div>
+          <div class="shortlist-output">
+            <p class="shortlist-count">
+              <strong id="shortlist-count">0</strong>
+              <span id="shortlist-label">stops selected</span>
+            </p>
+            <p id="shortlist-message">
+              No places saved yet. Add a stop above to begin.
+            </p>
+            <ol class="shortlist-list" id="shortlist-list"></ol>
+            <button
+              class="button button--outline-light"
+              id="clear-route"
+              type="button"
+              disabled
+            >
+              Clear shortlist
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="route section" id="route" aria-labelledby="route-title">
+        <div class="container route-grid">
+          <div class="route-intro">
+            <p class="section-label">Starter itinerary</p>
+            <h2 id="route-title">Seven days,<br /><em>southbound.</em></h2>
+            <p>
+              A one-way taster from Christchurch to Te Anau. Treat it as a
+              starting point, not a schedule to race through.
+            </p>
+            <p class="route-note">
+              If you have more time, add a night rather than another long drive.
+            </p>
+            <a
+              class="text-link"
+              href="https://www.newzealand.com/ca/feature/south-island-wonders-itinerary/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See a longer official itinerary
+              <span aria-hidden="true">↗</span></a
+            >
+          </div>
+
+          <ol class="itinerary-list">
+            <li>
+              <span class="day-number">Day 01</span>
+              <div>
+                <h3>Christchurch</h3>
+                <p>
+                  Arrive, rest and explore the city. If you have flown a long
+                  way, avoid starting a big drive straight away.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 02</span>
+              <div>
+                <h3>Christchurch → Aoraki / Mount Cook</h3>
+                <p>
+                  Travel through the Mackenzie Country, pausing at Takapō / Lake
+                  Tekapo and Lake Pūkaki on the way to Aoraki.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 03</span>
+              <div>
+                <h3>Aoraki → Wānaka</h3>
+                <p>
+                  Check DOC conditions for a morning walk, then continue over
+                  Lindis Pass to the laid-back lakeside town of Wānaka.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 04</span>
+              <div>
+                <h3>Wānaka</h3>
+                <p>
+                  Keep a full day for the lake, a viewpoint, a cycle trail or
+                  simply a slower morning with a mountain backdrop.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 05</span>
+              <div>
+                <h3>Wānaka → Queenstown</h3>
+                <p>
+                  Make your way to Queenstown and spend the afternoon beside
+                  Lake Whakatipu or exploring the town on foot.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 06</span>
+              <div>
+                <h3>Queenstown → Te Anau</h3>
+                <p>
+                  Choose a morning activity, then travel to Te Anau, a useful
+                  base for exploring Fiordland National Park.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="day-number">Day 07</span>
+              <div>
+                <h3>Milford Sound / Piopiotahi</h3>
+                <p>
+                  Leave plenty of time for the road into Milford Sound. Check
+                  weather and road conditions before setting out from Te Anau.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="tips section" id="tips" aria-labelledby="tips-title">
+        <div class="container tips-grid">
+          <div class="tips-intro">
+            <p class="section-label section-label--light">Know before you go</p>
+            <h2 id="tips-title">Good trips start with good prep.</h2>
+            <p>
+              Open each note for a practical starting point, then use the
+              official links to check current conditions.
+            </p>
+          </div>
+
+          <div class="tips-accordion">
+            <details open>
+              <summary>Driving: allow more time</summary>
+              <div class="detail-content">
+                <p>
+                  New Zealand drives on the left. Roads can be narrow, winding
+                  and slower than a map suggests, so rest properly and take
+                  regular breaks.
+                </p>
+                <a
+                  href="https://www.nzta.govt.nz/travelling-on-our-roads/visitors-and-new-residents/visiting-new-zealand"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >NZTA visitor driving guide
+                  <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>Weather: pack for change</summary>
+              <div class="detail-content">
+                <p>
+                  Bring layers and check the forecast before alpine walks or
+                  long drives. For tracks, also check DOC alerts and only go
+                  within your experience and equipment.
+                </p>
+                <a
+                  href="https://www.metservice.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MetService forecasts <span aria-hidden="true">↗</span></a
+                >
+                <a
+                  href="https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DOC safety advice <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>Bookings: plan the popular parts</summary>
+              <div class="detail-content">
+                <p>
+                  Great Walk huts and campsites can be in high demand. Check the
+                  official booking information early and keep an alternative in
+                  mind.
+                </p>
+                <a
+                  href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/online-bookings/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DOC booking information <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>Care: leave only footprints</summary>
+              <div class="detail-content">
+                <p>
+                  Stay on marked tracks, take rubbish with you, keep a
+                  respectful distance from wildlife and follow local signs and
+                  closures.
+                </p>
+                <a
+                  href="https://www.doc.govt.nz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Department of Conservation
+                  <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="footer-brand" href="#top">
+          South Island<span>Holiday Run</span>
+        </a>
+
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Facebook"
+          >
+            <i
+              class="fa-brands fa-square-facebook fa-2x"
+              aria-hidden="true"
+            ></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Instagram"
+          >
+            <i class="fa-brands fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="back-to-top" href="#top"
+            >Back to the top <span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>
+          Travel information can change. Check official sources before your
+          trip.
+        </p>
+
+        <details class="credits">
+          <summary>Image &amp; information credits</summary>
+          <div class="credits-content">
+            <p>Images are used for this educational project. Source pages:</p>
+            <ul>
+              <li>
+                <a
+                  href="https://www.travelandleisure.com/trip-ideas/road-trip-guide-to-south-island-new-zealand"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Hero — Travel + Leisure</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.newzealand.com/au/feature/hooker-valley-track/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Aoraki — Tourism New Zealand</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.realnz.com/zh-cn/destinations/milford-sound/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Milford Sound — RealNZ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.newzealand.com/uk/feature/lake-wakatipu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Queenstown — Tourism New Zealand</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.relaxingjourneys.co.nz/new-zealand/destinations/wanaka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wānaka — Relaxing Journeys</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.kaikoura.co.nz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Kaikōura — Kaikōura Tourism</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Abel Tasman — DOC</a
+                >
+              </li>
+            </ul>
+            <p>
+              Travel guidance links: NZTA, Department of Conservation,
+              MetService and Tourism New Zealand.
+            </p>
+          </div>
+        </details>
+        <p>
+          <span id="2026"></span> Copyright 2026 by Nananthunga Wijesundara.All
+          rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
